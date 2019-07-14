@@ -5,42 +5,36 @@ import ru.academits.koloskova.range.Range;
 public class Main {
     public static void main(String[] args) {
         Range range = new Range(1, 2);
-        System.out.println("Range: [" + range.getFrom() + " , " + range.getTo() + "]");
+        System.out.println("Range1: [" + range.getFrom() + " , " + range.getTo() + "]");
 
         System.out.println("Interval length: " + range.getLength());
 
         double number = 7.5;
         System.out.println("Is number " + number + " inside range: " + range.isInside(7));
 
-        Range intersectionRange = range.getIntersectionInterval(3, 6);
+        Range rangeCheck = new Range(1, 6);
+        System.out.println("Add Range2: [" + rangeCheck.getFrom() + " , " + rangeCheck.getTo() + "]");
+
+
+        Range intersection = range.getIntersection(rangeCheck);
         System.out.print("Interval intersection: ");
-        if (intersectionRange == null) {
+        if (intersection == null) {
             System.out.println("null");
         } else {
-            System.out.println(intersectionRange.getFrom() + " " + intersectionRange.getTo());
+            System.out.println("[" + intersection.getFrom() + " , " + intersection.getTo() + "]");
         }
 
-        Range[] ranges = range.getIntervalUnion(8, 9);
+        Range[] ranges = range.getUnion(rangeCheck);
         System.out.print("Interval union: ");
-        for (int i = 0; i < 2; i++) {
-            if (ranges[i] == null) {
-                break;
-            }
+        for (int i = 0; i < ranges.length; i++) {
             System.out.print("[" + ranges[i].getFrom() + " , " + ranges[i].getTo() + "] ");
         }
         System.out.println();
 
-        ranges = range.getIntervalDifference(1, 3);
         System.out.print("Interval difference: ");
-        if (ranges == null) {
-            System.out.println("null");
-        } else {
-            for (int i = 0; i < 2; i++) {
-                if (ranges[i] == null) {
-                    break;
-                }
-                System.out.print("[" + ranges[i].getFrom() + " , " + ranges[i].getTo() + "] ");
-            }
+        ranges = range.getDifference(rangeCheck);
+        for (int i = 0; i < ranges.length; i++) {
+            System.out.print("[" + ranges[i].getFrom() + " , " + ranges[i].getTo() + "] ");
         }
     }
 }

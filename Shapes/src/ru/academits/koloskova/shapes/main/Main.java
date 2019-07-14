@@ -1,4 +1,4 @@
-package ru.academits.koloskova.shapes;
+package ru.academits.koloskova.shapes.main;
 
 public class Main {
     public static void main(String[] args) {

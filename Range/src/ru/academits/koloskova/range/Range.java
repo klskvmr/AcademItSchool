@@ -33,68 +33,59 @@ public class Range {
         return ((x >= from) && (x <= to));
     }
 
-    public Range getIntersectionInterval(double from, double to) {
-        if ((this.to < from) || (to < this.from)) {
+    public Range getIntersection(Range range) {
+        if ((to <= range.from) || (range.to <= from)) {
             return null;
         }
-        if (this.from > from) {
-            from = this.from;
+
+        double maxFrom = range.from;
+        double minTo = range.to;
+
+        if (from > range.from) {
+            maxFrom = from;
         }
-        if (this.to < to) {
-            to = this.to;
+        if (to < range.to) {
+            minTo = to;
         }
-        return new Range(from, to);
+
+        return new Range(maxFrom, minTo);
     }
 
-    public Range[] getIntervalUnion(double from, double to) {
-        Range[] ranges = new Range[2];
-
-        if (this.to < from) {
-            ranges[0] = new Range(this.from, this.to);
-            ranges[1] = new Range(from, to);
-            return ranges;
-        } else if (to < this.from) {
-            ranges[0] = new Range(from, to);
-            ranges[1] = new Range(this.from, this.to);
-            return ranges;
+    public Range[] getUnion(Range range) { //лучше не менять аргументы
+        if (to < range.from) {
+            return new Range[]{new Range(from, to), new Range(range.from, range.to)};
+        } else if (range.to < from) {
+            return new Range[]{new Range(range.from, range.to), new Range(from, to)};
         }
 
-        if (this.from < from) {
-            from = this.from;
+        double minFrom = range.from;
+        double maxTo = range.to;
+
+        if (from < range.from) {
+            minFrom = from;
         }
         if (this.to > to) {
-            to = this.to;
+            maxTo = this.to;
         }
 
-        ranges[0] = new Range(from, to);
-        ranges[1] = null;
-
-        return ranges;
+        return new Range[]{new Range(minFrom, maxTo)};
     }
 
-    public Range[] getIntervalDifference(double from, double to) {
-        Range[] ranges = new Range[2];
-
-        if ((this.to < from) || (to < this.from)) {
-            ranges[0] = new Range(this.from, this.to);
-            ranges[1] = null;
-            return ranges;
+    public Range[] getDifference(Range range) {
+        if ((to < range.from) || (range.to < from)) {
+            return new Range[]{new Range(from, to)};
         }
 
-        if (this.from < from) {
-            ranges[0] = new Range(this.from, from);
-            if (this.to > to) {
-                ranges[1] = new Range(to, this.to);
+        if (from < range.from) {
+            if (to > range.to) {
+                return new Range[]{new Range(from, range.from), new Range(range.to, to)};
             } else {
-                ranges[1] = null;
+                return new Range[]{new Range(from, range.from)};
             }
-            return ranges;
-        } else if (this.to > to) {
-            ranges[0] = new Range(to, this.to);
-            ranges[1] = null;
-            return ranges;
+        } else if (to > range.to) {
+            return new Range[]{new Range(range.to, to)};
         }
 
-        return null;
+        return new Range[]{};
     }
 }
