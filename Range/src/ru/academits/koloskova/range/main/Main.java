@@ -12,7 +12,7 @@ public class Main {
         double number = 7.5;
         System.out.println("Is number " + number + " inside range: " + range.isInside(7));
 
-        Range rangeCheck = new Range(1, 6);
+        Range rangeCheck = new Range(4, 6);
         System.out.println("Add Range2: [" + rangeCheck.getFrom() + " , " + rangeCheck.getTo() + "]");
 
 
@@ -26,15 +26,15 @@ public class Main {
 
         Range[] ranges = range.getUnion(rangeCheck);
         System.out.print("Interval union: ");
-        for (int i = 0; i < ranges.length; i++) {
-            System.out.print("[" + ranges[i].getFrom() + " , " + ranges[i].getTo() + "] ");
+        for (Range iRange : ranges) {
+            System.out.print("[" + iRange.getFrom() + " , " + iRange.getTo() + "] ");
         }
         System.out.println();
 
         System.out.print("Interval difference: ");
         ranges = range.getDifference(rangeCheck);
-        for (int i = 0; i < ranges.length; i++) {
-            System.out.print("[" + ranges[i].getFrom() + " , " + ranges[i].getTo() + "] ");
+        for (Range iRange : ranges) {
+            System.out.print("[" + iRange.getFrom() + " , " + iRange.getTo() + "] ");
         }
     }
 }
