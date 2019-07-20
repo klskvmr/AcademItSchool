@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e35542b-689f-496f-aeae-27ffbb276e69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,29 +22,141 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            <state relative-caret-position="44">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#125#126#0" expanded="true" />
+                <element signature="e#161#162#0" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+              <folding>
+                <element signature="e#123#124#0" expanded="true" />
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+            <state relative-caret-position="-514">
+              <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+              <folding>
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1139#1140#0" expanded="true" />
+                <element signature="e#1189#1190#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
+                <element signature="e#1708#1709#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+                <element signature="e#2231#2232#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -70,28 +179,33 @@
       <list>
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Main.java" />
         <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Main.java" />
-        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java" />
-        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" />
-        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" />
-        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" />
-        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" />
         <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" />
         <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java" />
+        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" />
+        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" />
+        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" />
+        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" />
+        <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,10 +257,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shapes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AcademItSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademItSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="Shapes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shapes" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -166,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.range.main.Main" />
       <module name="Range" />
@@ -208,8 +331,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -235,10 +358,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14630872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.041608877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -247,23 +370,23 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3243626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32808024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3323782" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33144477" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295129" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.058073655" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.02885906" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.12013423" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32871014" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -343,104 +466,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-          <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="71">
+          <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="-212">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
           <folding>
             <element signature="e#235#236#0" expanded="true" />
             <element signature="e#262#263#0" expanded="true" />
@@ -454,10 +490,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+        <state relative-caret-position="294">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <element signature="e#123#124#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding>
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2231#2232#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

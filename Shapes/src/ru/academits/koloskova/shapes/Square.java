@@ -1,6 +1,6 @@
 package ru.academits.koloskova.shapes;
 
-public class Square {
+public class Square implements Shapes {
     private double length;
 
     public Square(double length) {
@@ -13,5 +13,25 @@ public class Square {
 
     public void setLength(double length) {
         this.length = length;
+    }
+
+    @Override
+    public double getWidth() {
+        return length;
+    }
+
+    @Override
+    public double getHeight() {
+        return length;
+    }
+
+    @Override
+    public double getArea() {
+        return length * length;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 4 * length;
     }
 }
