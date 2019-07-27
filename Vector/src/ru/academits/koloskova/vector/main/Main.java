@@ -10,9 +10,9 @@ public class Main {
         Vector vector = new Vector(array);
 
 //        Vector vector = new Vector(4);
-        Vector vector1 = new Vector(vector);
+        Vector vector1 = new Vector(9, array);
 
-        System.out.println(Arrays.toString(vector.getValluesArray()));
+//        System.out.println(Arrays.toString(vector.getValluesArray()));
         System.out.println(Arrays.toString(vector1.getValluesArray()));
     }
 }

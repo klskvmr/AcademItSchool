@@ -36,8 +36,18 @@ public class Vector {
         this.valuesArray = valuesArray;
     }
 
-    public Vector(int n, double[] array) {
+    public Vector(int n, double[] valuesArray) {
+        this.n = n;
 
+        double[] array  = new double[n];
+        for (int i = 0; i < n; i++) {
+            if (i > valuesArray.length) {
+                array[i] = 0;
+                continue;
+            }
+            array[i] = valuesArray[i];
+        }
+        this.valuesArray = array;
     }
 
     public int getN() {
