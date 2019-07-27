@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e35542b-689f-496f-aeae-27ffbb276e69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vector/Vector.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,63 +18,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="157">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding>
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java">
+        <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="120">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-              <folding>
-                <element signature="e#2265#2266#0" expanded="true" />
-                <element signature="e#2297#2298#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -110,10 +71,12 @@
         <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" />
-        <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" />
         <option value="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" />
+        <option value="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" />
+        <option value="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java" />
+        <option value="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java" />
       </list>
     </option>
   </component>
@@ -215,8 +178,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,13 +199,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.range.main.Main" />
       <module name="Range" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.academits.koloskova.range.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.vector.main.Main" />
+      <module name="Vector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.koloskova.vector.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -278,6 +254,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
       </list>
@@ -308,7 +285,7 @@
     <frame x="67" y="27" width="977" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19913886" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24327233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +299,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33144477" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33106577" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.058073655" />
@@ -406,37 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -451,13 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -468,20 +407,67 @@
     <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        <state relative-caret-position="390">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="e#2265#2266#0" expanded="true" />
-            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
