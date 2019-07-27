@@ -1,6 +1,6 @@
 package ru.academits.koloskova.shapes;
 
-public class Rectangle implements Shapes {
+public class Rectangle implements Shape {
     private double height;
     private double width;
 
@@ -9,12 +9,14 @@ public class Rectangle implements Shapes {
         this.width = width;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
+    @Override
     public double getWidth() {
         return width;
+    }
+
+    @Override
+    public double getHeight() {
+        return height;
     }
 
     public void setHeight(double height) {

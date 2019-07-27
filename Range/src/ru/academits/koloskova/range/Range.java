@@ -50,7 +50,6 @@ public class Range {
 
         double minFrom = Math.min(from, range.from);
         double maxTo = Math.max(to, range.to);
-
         if (minTo < maxFrom) {
             return new Range[]{new Range(minFrom, minTo), new Range(maxFrom, maxTo)};
         }

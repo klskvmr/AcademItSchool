@@ -1,6 +1,6 @@
 package ru.academits.koloskova.shapes;
 
-public class Square implements Shapes {
+public class Square implements Shape {
     private double length;
 
     public Square(double length) {

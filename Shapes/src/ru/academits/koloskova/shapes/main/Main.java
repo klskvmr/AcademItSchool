@@ -8,7 +8,5 @@ public class Main {
         Triangle triangle =  new Triangle(1,6,4,9,2,2);
         System.out.println(triangle.getPerimeter());
         System.out.println(triangle.getArea());
-
-
     }
 }
