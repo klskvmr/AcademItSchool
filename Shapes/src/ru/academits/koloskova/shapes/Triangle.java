@@ -14,7 +14,6 @@ public class Triangle implements Shape {
     private double B;
     private double C;
 
-
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;
         this.y1 = y1;
@@ -23,10 +22,12 @@ public class Triangle implements Shape {
         this.x3 = x3;
         this.y3 = y3;
 
-        {
-            A = getSide(x1, x2, y1, y2);
-            B = getSide(x1, x3, y1, y3);
-            C = getSide(x2, x3, y2, y3);
+        A = getSide(x1, y1, x2, y2);
+        B = getSide(x1, y1, x3, y3);
+        C = getSide(x2, y2, x3, y3);
+
+        if (Math.abs(((x3 - x1) * (y2 - y1)) - ((y3 - y1) * (x2 - x1))) <= epsilon) {
+            throw new IllegalArgumentException("Точки лежат на одной прямой!");
         }
     }
 
@@ -78,7 +79,7 @@ public class Triangle implements Shape {
         this.y3 = y3;
     }
 
-    private double getSide(double x1, double x2, double y1, double y2) {
+    private static double getSide(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
     }
 
@@ -101,5 +102,38 @@ public class Triangle implements Shape {
     @Override
     public double getPerimeter() {
         return A + B + C;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure type: " + this.getClass().getSimpleName() + System.lineSeparator() +
+                "Width: " + this.getWidth() + System.lineSeparator() +
+                "Height: " + this.getHeight() + System.lineSeparator() +
+                "Area: " + this.getArea() + System.lineSeparator() +
+                "Perimeter: " + this.getPerimeter() + System.lineSeparator();
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) return true;
+
+        if (object == null || object.getClass() != this.getClass()) return false;
+
+        Triangle triangle = (Triangle) object;
+        return (Math.abs(A - triangle.A) <= epsilon) &&
+                (Math.abs(B - triangle.B) <= epsilon) &&
+                (Math.abs(C - triangle.C) <= epsilon);
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 17;
+        int hash = 1;
+
+        hash = prime * hash + Double.hashCode(A);
+        hash = prime * hash + Double.hashCode(B);
+        hash = prime * hash + Double.hashCode(C);
+
+        return hash;
     }
 }
