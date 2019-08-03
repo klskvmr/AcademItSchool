@@ -119,6 +119,8 @@ public class Triangle implements Shape {
 
         if (object == null || object.getClass() != this.getClass()) return false;
 
+        if(hashCode() == object.hashCode()){return true;}
+
         Triangle triangle = (Triangle) object;
         return (Math.abs(A - triangle.A) <= epsilon) &&
                 (Math.abs(B - triangle.B) <= epsilon) &&
