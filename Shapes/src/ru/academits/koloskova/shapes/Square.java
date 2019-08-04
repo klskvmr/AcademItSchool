@@ -47,13 +47,17 @@ public class Square implements Shape {
     @Override
     public boolean equals(Object object) {
         // проверили что передали сам объект
-        if (object == this) return true;
+        if (object == this) {
+            return true;
+        }
         // отсеяли null и объекты других классов
-        if (object == null || object.getClass() != this.getClass()) return false;
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
         // привели объект к Square
         Square square = (Square) object;
         // проверили равенство ссылок и полей
-        return Math.abs(length - square.length) <= epsilon;
+        return length == square.length;
     }
 
     @Override

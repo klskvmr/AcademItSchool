@@ -48,13 +48,18 @@ public class Circle implements Shape {
     @Override
     public boolean equals(Object object) {
         // проверили что передали сам объект
-        if (object == this) return true;
+        if (object == this) {
+            return true;
+        }
         // отсеяли null и объекты других классов
-        if (object == null || object.getClass() != this.getClass()) return false;
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
+
         // привели объект к Circle
         Circle circle = (Circle) object;
         // проверили равенство ссылок и полей
-        return Math.abs(radius - circle.radius) <= epsilon;
+        return radius == circle.radius;
     }
 
     @Override

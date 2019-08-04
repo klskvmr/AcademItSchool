@@ -48,13 +48,15 @@ public class Rectangle implements Shape {
 
     @Override
     public boolean equals(Object object) {
-        if (object == this) return true;
-
-        if (object == null || object.getClass() != this.getClass()) return false;
+        if (object == this) {
+            return true;
+        }
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
 
         Rectangle rectangle = (Rectangle) object;
-        return (Math.abs(height - rectangle.height) <= epsilon) &&
-                (Math.abs(width - rectangle.width) <= epsilon);
+        return height == rectangle.height && width == rectangle.width;
     }
 
     @Override

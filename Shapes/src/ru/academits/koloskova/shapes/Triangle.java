@@ -1,6 +1,8 @@
 package ru.academits.koloskova.shapes;
 
 public class Triangle implements Shape {
+    private static final double epsilon = 1.0e-10;
+
     private double x1;
     private double y1;
 
@@ -10,25 +12,21 @@ public class Triangle implements Shape {
     private double x3;
     private double y3;
 
-    private double A;
-    private double B;
-    private double C;
+    private double a;
+    private double b;
+    private double c;
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
+        if (Math.abs(((x3 - x1) * (y2 - y1)) - ((y3 - y1) * (x2 - x1))) <= epsilon) {
+            throw new IllegalArgumentException("Точки лежат на одной прямой!");
+        }
+
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
         this.x3 = x3;
         this.y3 = y3;
-
-        A = getSide(x1, y1, x2, y2);
-        B = getSide(x1, y1, x3, y3);
-        C = getSide(x2, y2, x3, y3);
-
-        if (Math.abs(((x3 - x1) * (y2 - y1)) - ((y3 - y1) * (x2 - x1))) <= epsilon) {
-            throw new IllegalArgumentException("Точки лежат на одной прямой!");
-        }
     }
 
     public double getX1() {
@@ -53,6 +51,18 @@ public class Triangle implements Shape {
 
     public double getY3() {
         return y3;
+    }
+
+    public double getA() {
+        return getSide(x1, y1, x2, y2);
+    }
+
+    public double getB() {
+        return getSide(x1, y1, x3, y3);
+    }
+
+    public double getC() {
+        return getSide(x2, y2, x3, y3);
     }
 
     public void setX1(double x1) {
@@ -96,12 +106,12 @@ public class Triangle implements Shape {
     @Override
     public double getArea() {
         double semiPerimeter = getPerimeter() / 2;
-        return Math.sqrt(semiPerimeter * (semiPerimeter - A) * (semiPerimeter - B) * (semiPerimeter - C));
+        return Math.sqrt(semiPerimeter * (semiPerimeter - getA()) * (semiPerimeter - getB()) * (semiPerimeter - getC()));
     }
 
     @Override
     public double getPerimeter() {
-        return A + B + C;
+        return getA() + getB() + getC();
     }
 
     @Override
@@ -115,16 +125,16 @@ public class Triangle implements Shape {
 
     @Override
     public boolean equals(Object object) {
-        if (object == this) return true;
-
-        if (object == null || object.getClass() != this.getClass()) return false;
-
-        if(hashCode() == object.hashCode()){return true;}
+        if (object == this) {
+            return true;
+        }
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
 
         Triangle triangle = (Triangle) object;
-        return (Math.abs(A - triangle.A) <= epsilon) &&
-                (Math.abs(B - triangle.B) <= epsilon) &&
-                (Math.abs(C - triangle.C) <= epsilon);
+        return getA() == triangle.getA() && getB() == triangle.getB() &&
+                getC() == triangle.getC();
     }
 
     @Override
@@ -132,9 +142,9 @@ public class Triangle implements Shape {
         final int prime = 17;
         int hash = 1;
 
-        hash = prime * hash + Double.hashCode(A);
-        hash = prime * hash + Double.hashCode(B);
-        hash = prime * hash + Double.hashCode(C);
+        hash = prime * hash + Double.hashCode(getA());
+        hash = prime * hash + Double.hashCode(getB());
+        hash = prime * hash + Double.hashCode(getC());
 
         return hash;
     }

@@ -1,21 +1,19 @@
 package ru.academits.koloskova.shapes.main;
 
 import ru.academits.koloskova.shapes.*;
-import ru.academits.koloskova.shapes.comparator.SortByArea;
-import ru.academits.koloskova.shapes.comparator.SortByPerimeter;
+import ru.academits.koloskova.shapes.comparator.AreaComparator;
+import ru.academits.koloskova.shapes.comparator.PerimeterComparator;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
 
 public class Main {
     private static Shape getMaxAreaShape(ArrayList<Shape> shapes) {
-        shapes.sort(new SortByArea());
+        shapes.sort(new AreaComparator());
         return shapes.get(shapes.size() - 1);
     }
 
-    private static Shape getSecondPerimeter(ArrayList<Shape> shapes) {
-        shapes.sort(new SortByPerimeter());
+    private static Shape getSecondPerimeterShape(ArrayList<Shape> shapes) {
+        shapes.sort(new PerimeterComparator());
         return shapes.get(shapes.size() - 2);
     }
 
@@ -34,6 +32,6 @@ public class Main {
         System.out.println(getMaxAreaShape(shapes).toString());
 
         System.out.println("FIGURE WITH THE SECOND LARGEST PERIMETER");
-        System.out.println(getSecondPerimeter(shapes).toString());
+        System.out.println(getSecondPerimeterShape(shapes).toString());
     }
 }
