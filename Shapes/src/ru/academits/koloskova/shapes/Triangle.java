@@ -12,10 +12,6 @@ public class Triangle implements Shape {
     private double x3;
     private double y3;
 
-    private double a;
-    private double b;
-    private double c;
-
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         if (Math.abs(((x3 - x1) * (y2 - y1)) - ((y3 - y1) * (x2 - x1))) <= epsilon) {
             throw new IllegalArgumentException("Точки лежат на одной прямой!");
@@ -53,15 +49,15 @@ public class Triangle implements Shape {
         return y3;
     }
 
-    public double getA() {
+    private double getA() {
         return getSide(x1, y1, x2, y2);
     }
 
-    public double getB() {
+    private double getB() {
         return getSide(x1, y1, x3, y3);
     }
 
-    public double getC() {
+    private double getC() {
         return getSide(x2, y2, x3, y3);
     }
 
@@ -116,11 +112,11 @@ public class Triangle implements Shape {
 
     @Override
     public String toString() {
-        return "Figure type: " + this.getClass().getSimpleName() + System.lineSeparator() +
-                "Width: " + this.getWidth() + System.lineSeparator() +
-                "Height: " + this.getHeight() + System.lineSeparator() +
-                "Area: " + this.getArea() + System.lineSeparator() +
-                "Perimeter: " + this.getPerimeter() + System.lineSeparator();
+        return "Figure type: " + getClass().getSimpleName() + System.lineSeparator() +
+                "Width: " + getWidth() + System.lineSeparator() +
+                "Height: " + getHeight() + System.lineSeparator() +
+                "Area: " + getArea() + System.lineSeparator() +
+                "Perimeter: " + getPerimeter() + System.lineSeparator();
     }
 
     @Override
@@ -128,13 +124,13 @@ public class Triangle implements Shape {
         if (object == this) {
             return true;
         }
-        if (object == null || object.getClass() != this.getClass()) {
+        if (object == null || object.getClass() != getClass()) {
             return false;
         }
-
         Triangle triangle = (Triangle) object;
-        return getA() == triangle.getA() && getB() == triangle.getB() &&
-                getC() == triangle.getC();
+        return x1 == triangle.x1 && y1 == triangle.y1 && x2 == triangle.x2 &&
+                y2 == triangle.y2 && x3 == triangle.x3 && y3 == triangle.y3;
+
     }
 
     @Override

@@ -37,11 +37,11 @@ public class Square implements Shape {
 
     @Override
     public String toString() {
-        return "Figure type: " + this.getClass().getSimpleName() + System.lineSeparator() +
-                "Width: " + this.getWidth() + System.lineSeparator() +
-                "Height: " + this.getHeight() + System.lineSeparator() +
-                "Area: " + this.getArea() + System.lineSeparator() +
-                "Perimeter: " + this.getPerimeter() + System.lineSeparator();
+        return "Figure type: " + getClass().getSimpleName() + System.lineSeparator() +
+                "Width: " + getWidth() + System.lineSeparator() +
+                "Height: " + getHeight() + System.lineSeparator() +
+                "Area: " + getArea() + System.lineSeparator() +
+                "Perimeter: " + getPerimeter() + System.lineSeparator();
     }
 
     @Override
@@ -51,12 +51,12 @@ public class Square implements Shape {
             return true;
         }
         // отсеяли null и объекты других классов
-        if (object == null || object.getClass() != this.getClass()) {
+        if (object == null || object.getClass() != getClass()) {
             return false;
         }
         // привели объект к Square
         Square square = (Square) object;
-        // проверили равенство ссылок и полей
+        // проверили равенство полей
         return length == square.length;
     }
 
