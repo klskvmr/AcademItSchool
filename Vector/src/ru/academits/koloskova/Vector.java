@@ -1,4 +1,4 @@
-package ru.academits.koloskova.vector;
+package ru.academits.koloskova;
 
 import java.util.Arrays;
 
@@ -75,7 +75,8 @@ public class Vector {
         }
         Vector vector = (Vector) obj;
 
-        return Arrays.equals(vectorComponents, vector.vectorComponents);
+        return vectorComponents.length == vector.vectorComponents.length &&
+                Arrays.equals(vectorComponents, vector.vectorComponents);
     }
 
     @Override
@@ -118,7 +119,7 @@ public class Vector {
     }
 
     public void multiplyByScalar(int number) {
-        for (int i = 0; i < vectorComponents.length; i++) {
+        for (int i = 0; i < getSize(); i++) {
             if (vectorComponents[i] == 0) {
                 continue;
             }
@@ -164,7 +165,6 @@ public class Vector {
 
         return difference;
     }
-
 
     public static double getScalarProduct(Vector vector1, Vector vector2) {
         Vector vector = new Vector(vector1);
