@@ -22,24 +22,24 @@ public class Vector {
             throw new IllegalArgumentException("Vector length can't be equal to 0.");
         }
 
-        this.components = components;
+        this.components = Arrays.copyOf(components, components.length);
     }
 
     public Vector(int length, double[] components) {
-        if ((length <= 0) || (components.length == 0)) {
+        if (length <= 0) {
             throw new IllegalArgumentException("Vector length can't be less than or equal to 0.");
         }
 
         this.components = Arrays.copyOf(components, length);
     }
 
-    public int getSize() {
+    public int getLength() {
         return components.length;
     }
 
     public double getElement(int index) {
         if (index < 0 || index >= components.length) {
-            throw new ArrayIndexOutOfBoundsException("You're out of bounds of array.");
+            throw new IndexOutOfBoundsException("You're out of bounds of array.");
         }
 
         return components[index];
@@ -47,7 +47,7 @@ public class Vector {
 
     public void setElement(int index, double number) {
         if (index < 0 || index >= components.length) {
-            throw new ArrayIndexOutOfBoundsException("You're out of bounds of array.");
+            throw new IndexOutOfBoundsException("You're out of bounds of array.");
         }
 
         components[index] = number;
@@ -74,7 +74,7 @@ public class Vector {
     }
 
     public void multiplicationByScalar(int number) {
-        for (int i = 0; i < getSize(); i++) {
+        for (int i = 0; i < getLength(); i++) {
             if (components[i] == 0) {
                 continue;
             }
@@ -101,8 +101,10 @@ public class Vector {
     }
 
     public static double getScalarProduct(Vector vector1, Vector vector2) {
+        int minLength = Math.min(vector1.components.length, vector2.components.length);
         double scalar = 0;
-        for (int i = 0; i < Math.min(vector1.components.length, vector2.components.length); i++) {
+
+        for (int i = 0; i < minLength; i++) {
             scalar += vector1.components[i] * vector2.components[i];
         }
 
@@ -139,9 +141,7 @@ public class Vector {
         final int prime = 17;
         int hash = 1;
 
-        hash = prime * hash + components.length;
         hash = prime * hash + Arrays.hashCode(components);
-
         return hash;
     }
 }
