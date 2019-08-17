@@ -1,6 +1,6 @@
-package ru.academits.koloskova.main;
+package ru.academits.koloskova.vector.main;
 
-import ru.academits.koloskova.Vector;
+import ru.academits.koloskova.vector.Vector;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,14 +19,14 @@ public class Main {
         System.out.println("Vector1 & Vector2: " + (vector1.hashCode() == vector2.hashCode()));
 
         System.out.println();
-        vector2.getSpread();
+        vector2.revert();
         System.out.println("Spread Vector2: " + vector2.toString());
 
-        vector2.multiplyByScalar(4);
+        vector2.multiplicationByScalar(4);
         System.out.println("Multiply by scalar Vector2: " + vector2);
 
-        System.out.println("Vector, index = 2: " + vector.getComponentByIndex(2));
-        vector.setComponentByIndex(0, 10);
+        System.out.println("Vector, index = 2: " + vector.getElement(2));
+        vector.setElement(0, 10);
         System.out.println("Vector, change element by index = 0: " + vector.toString());
 
         double[] a = {1, 2, 3, 4};
