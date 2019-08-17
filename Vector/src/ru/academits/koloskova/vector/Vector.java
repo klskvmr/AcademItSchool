@@ -39,7 +39,7 @@ public class Vector {
 
     public double getElement(int index) {
         if (index < 0 || index >= components.length) {
-            throw new IndexOutOfBoundsException("You're out of bounds of array.");
+            throw new IndexOutOfBoundsException("Element with this index doesn't exists.");
         }
 
         return components[index];
@@ -47,7 +47,7 @@ public class Vector {
 
     public void setElement(int index, double number) {
         if (index < 0 || index >= components.length) {
-            throw new IndexOutOfBoundsException("You're out of bounds of array.");
+            throw new IndexOutOfBoundsException("Element with this index doesn't exists.");
         }
 
         components[index] = number;
