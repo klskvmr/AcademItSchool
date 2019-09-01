@@ -1,8 +1,8 @@
-package ru.academits.koloskova.shapes.main;
+package ru.academits.koloskova.vector.shapes.main;
 
-import ru.academits.koloskova.shapes.*;
-import ru.academits.koloskova.shapes.comparator.AreaComparator;
-import ru.academits.koloskova.shapes.comparator.PerimeterComparator;
+import ru.academits.koloskova.vector.shapes.*;
+import ru.academits.koloskova.vector.shapes.comparator.AreaComparator;
+import ru.academits.koloskova.vector.shapes.comparator.PerimeterComparator;
 
 import java.util.ArrayList;
 

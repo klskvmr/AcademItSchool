@@ -1,6 +1,6 @@
-package ru.academits.koloskova.shapes.comparator;
+package ru.academits.koloskova.vector.shapes.comparator;
 
-import ru.academits.koloskova.shapes.Shape;
+import ru.academits.koloskova.vector.shapes.Shape;
 
 import java.util.Comparator;
 

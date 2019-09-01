@@ -1,39 +1,40 @@
-package ru.academits.koloskova.shapes;
+package ru.academits.koloskova.vector.shapes;
 
-public class Square implements Shape {
-    private double length;
+public class Circle implements Shape {
+    private double radius;
 
-    public Square(double length) {
-        this.length = length;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public double getLength() {
-        return length;
+    public double getRadius() {
+        return radius;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     @Override
     public double getWidth() {
-        return length;
+        return 2 * radius;
     }
 
     @Override
     public double getHeight() {
-        return length;
+        return 2 * radius;
     }
 
     @Override
     public double getArea() {
-        return length * length;
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * length;
+        return 2 * Math.PI * radius;
     }
+
 
     @Override
     public String toString() {
@@ -54,10 +55,10 @@ public class Square implements Shape {
         if (object == null || object.getClass() != getClass()) {
             return false;
         }
-        // привели объект к Square
-        Square square = (Square) object;
+        // привели объект к Circle
+        Circle circle = (Circle) object;
         // проверили равенство полей
-        return length == square.length;
+        return radius == circle.radius;
     }
 
     @Override
@@ -65,7 +66,7 @@ public class Square implements Shape {
         final int prime = 17;
         int hash = 1;
 
-        hash = prime * hash + Double.hashCode(length);
+        hash = prime * hash + Double.hashCode(radius);
 
         return hash;
     }

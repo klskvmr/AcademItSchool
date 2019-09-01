@@ -1,40 +1,41 @@
-package ru.academits.koloskova.shapes;
+package ru.academits.koloskova.vector.shapes;
 
-public class Circle implements Shape {
-    private double radius;
+public class Rectangle implements Shape {
+    private double height;
+    private double width;
 
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public Rectangle(double height, double width) {
+        this.height = height;
+        this.width = width;
     }
 
     @Override
     public double getWidth() {
-        return 2 * radius;
+        return width;
     }
 
     @Override
     public double getHeight() {
-        return 2 * radius;
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(radius, 2);
+        return height * width;
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * Math.PI * radius;
+        return 2 * (height + width);
     }
-
 
     @Override
     public String toString() {
@@ -47,18 +48,15 @@ public class Circle implements Shape {
 
     @Override
     public boolean equals(Object object) {
-        // проверили что передали сам объект
         if (object == this) {
             return true;
         }
-        // отсеяли null и объекты других классов
         if (object == null || object.getClass() != getClass()) {
             return false;
         }
-        // привели объект к Circle
-        Circle circle = (Circle) object;
-        // проверили равенство полей
-        return radius == circle.radius;
+
+        Rectangle rectangle = (Rectangle) object;
+        return height == rectangle.height && width == rectangle.width;
     }
 
     @Override
@@ -66,7 +64,8 @@ public class Circle implements Shape {
         final int prime = 17;
         int hash = 1;
 
-        hash = prime * hash + Double.hashCode(radius);
+        hash = prime * hash + Double.hashCode(height);
+        hash = prime * hash + Double.hashCode(width);
 
         return hash;
     }

@@ -1,6 +1,6 @@
-package ru.academits.koloskova.range.main;
+package ru.academits.koloskova.vector.range.main;
 
-import ru.academits.koloskova.range.Range;
+import ru.academits.koloskova.vector.range.Range;
 
 public class Main {
     public static void main(String[] args) {

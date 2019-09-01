@@ -23,7 +23,7 @@ public class Matrix {
     public Matrix(Matrix matrix) {
         rows = new Vector[matrix.rows.length];
 
-        int columnsAmount = matrix.rows[0].getLength();
+        int columnsAmount = matrix.rows[0].getSize();
 
         for (int i = 0; i < rows.length; i++) {
             rows[i] = new Vector(columnsAmount);
@@ -55,7 +55,7 @@ public class Matrix {
     }
 
     public int getColumnsAmount() {
-        return rows[0].getLength();
+        return rows[0].getSize();
     }
 
     public Vector getRow(int index) {
@@ -70,7 +70,7 @@ public class Matrix {
         if ((index < 0) || (index >= getRowsAmount())) {
             throw new IndexOutOfBoundsException("Row with this index doesn't exists");
         }
-        if (row.getLength() != getColumnsAmount()) {
+        if (row.getSize() != getColumnsAmount()) {
             throw new IllegalArgumentException("the dimension of the given row must correspond to the size of the row being changed");
         }
 
@@ -113,7 +113,7 @@ public class Matrix {
     }
 
     public void multiplicationByVector(Vector vector) {
-        if (vector.getLength() > getColumnsAmount()) {
+        if (vector.getSize() > getColumnsAmount()) {
             throw new IllegalArgumentException("The length of the vector must match the number of matrix columns");
         }
 

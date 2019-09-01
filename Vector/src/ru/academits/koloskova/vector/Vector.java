@@ -41,10 +41,10 @@ public class Vector {
         double sum = 0;
 
         for (double component : components) {
-            sum = Math.pow(component, 2);
+            sum += Math.pow(component, 2);
         }
 
-        return Math.abs(sum);
+        return Math.sqrt(sum);
     }
 
     public double getElement(int index) {
