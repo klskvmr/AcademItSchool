@@ -33,8 +33,18 @@ public class Vector {
         this.components = Arrays.copyOf(components, length);
     }
 
-    public int getLength() {
+    public int getSize() {
         return components.length;
+    }
+
+    public double getLength() {
+        double sum = 0;
+
+        for (double component : components) {
+            sum = Math.pow(component, 2);
+        }
+
+        return Math.abs(sum);
     }
 
     public double getElement(int index) {
@@ -73,8 +83,8 @@ public class Vector {
         }
     }
 
-    public void multiplicationByScalar(int number) {
-        for (int i = 0; i < getLength(); i++) {
+    public void multiplicationByScalar(double number) {
+        for (int i = 0; i < getSize(); i++) {
             if (components[i] == 0) {
                 continue;
             }
