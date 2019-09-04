@@ -2,10 +2,6 @@ package ru.academits.koloskova.matrix;
 
 import ru.academits.koloskova.vector.Vector;
 
-import java.util.Arrays;
-
-//В конструкторах постараться добить данные нулями до максимальной длины.??????
-//exception
 public class Matrix {
     private Vector[] rows;
 
@@ -23,10 +19,8 @@ public class Matrix {
     public Matrix(Matrix matrix) {
         rows = new Vector[matrix.rows.length];
 
-        int columnsAmount = matrix.rows[0].getSize();
-
         for (int i = 0; i < rows.length; i++) {
-            rows[i] = new Vector(columnsAmount);
+            rows[i] = new Vector(matrix.getRow(i));
         }
     }
 
@@ -103,13 +97,64 @@ public class Matrix {
     }
 
     public void multiplicationByScalar(int number) {
-        for (int i = 0; i < getRowsAmount(); i++) {
-            rows[0].multiplicationByScalar(number);
+        for (Vector row : rows) {
+            row.multiplicationByScalar(number);
         }
     }
 
+    private double[][] getMinor(int currentColumn, double[][] matrix) {
+        int minorSize = matrix.length - 1;
+        double[][] minor = new double[minorSize][minorSize];
+
+        int skipRow = 1;
+
+        for (int i = 0; i < minorSize; i++) {
+            int skipColumn = 0;
+
+            for (int j = 0; j < minorSize; j++) {
+                if (j == currentColumn) {
+                    skipColumn = 1;
+                }
+
+                minor[i][j] = matrix[i + skipRow][j + skipColumn];
+            }
+        }
+
+        return minor;
+    }
+
+    private double calculateDeterminant(double[][] matrix) {
+        int matrixSize = matrix.length;
+
+        if (matrixSize == 2) {
+            return matrix[0][0] * matrix[1][1] - matrix[1][0] * matrix[0][1];
+        }
+
+        double determinant = 0;
+        int decompositionString = 0;
+        for (int j = 0; j < matrixSize; j++) {
+            determinant += Math.pow(-1, j) * matrix[decompositionString][j] * calculateDeterminant(getMinor(j, matrix));
+        }
+
+        return determinant;
+    }
+
+
     public double getDeterminant() {
-        return 1;
+        if (getRowsAmount() != getColumnsAmount()) {
+            throw new IllegalArgumentException("The determinant can only be calculated for a square matrix");
+        }
+
+        int matrixSize = getRowsAmount();
+        double[][] matrix = new double[matrixSize][matrixSize];
+
+        for (int i = 0; i < matrixSize; i++) {
+            for (int j = 0; j < matrixSize; j++) {
+                matrix[i][j] = rows[i].getElement(j);
+            }
+        }
+
+        return calculateDeterminant(matrix);
     }
 
     public void multiplicationByVector(Vector vector) {
@@ -126,11 +171,34 @@ public class Matrix {
         rows = result;
     }
 
-    public void sum() {
+    public static Matrix sum(Matrix matrix1, Matrix matrix2) {
+        if ((matrix1.getRowsAmount() != matrix2.getRowsAmount())||(matrix1.getColumnsAmount() != matrix2.getColumnsAmount())) {
+            throw new IllegalArgumentException("Matrices must be of the same dimension!");
+        }
 
+        Matrix sum = new Matrix(matrix1);
+
+        for (int i = 0; i < sum.getRowsAmount(); i++){
+            for (int j = 0; j < sum.getColumnsAmount(); j++){
+                sum.rows[i].setElement(j, sum.rows[i].getElement(j) + matrix2.rows[i].getElement(j));
+            }
+        }
+        return sum;
     }
 
-    public void difference() {
+    public static Matrix difference(Matrix matrix, Matrix subtractedMatrix) {
+        if ((matrix.getRowsAmount() != subtractedMatrix.getRowsAmount())||(matrix.getColumnsAmount() != subtractedMatrix.getColumnsAmount())) {
+            throw new IllegalArgumentException("Matrices must be of the same dimension!");
+        }
+
+        Matrix difference = new Matrix(matrix);
+
+        for (int i = 0; i < difference.getRowsAmount(); i++){
+            for (int j = 0; j < difference.getColumnsAmount(); j++){
+                difference.rows[i].setElement(j, matrix.rows[i].getElement(j) - subtractedMatrix.rows[i].getElement(j));
+            }
+        }
+        return difference;
     }
 
     @Override

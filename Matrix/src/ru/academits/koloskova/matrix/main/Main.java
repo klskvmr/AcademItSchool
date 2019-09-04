@@ -12,14 +12,27 @@ public class Main {
         System.out.println("Matrix1: " + matrix1.toString());
         System.out.println();
 
+        double[][] testMatrixArray = new double[4][4];
+        testMatrixArray[0] = new double[]{1, -2, 3, 1};
+        testMatrixArray[1] = new double[]{3, 0, 1, 5};
+        testMatrixArray[2] = new double[]{1, 3, 4, -2};
+        testMatrixArray[3] = new double[]{4, 2, 2, 1};
+        Matrix matrix2 = new Matrix(testMatrixArray);
+
         //проверка конструктора из двумерного массива
-        double[][] array = new double[2][3];
-        array[0] = new double[]{1, 2, 3};
-        array[1] = new double[]{4, 5, 6};
-        Matrix matrix2 = new Matrix(array);
-        System.out.println("Matrix2: " + matrix2.toString());
-        matrix2.multiplicationByVector(new Vector(new double[]{1, 1, 1}));
-        System.out.println("Matrix2 x vector{1, 1, 1}: " + matrix2);
+        testMatrixArray[0] = new double[]{2, -2, 3, 1};
+        testMatrixArray[1] = new double[]{3, 0, 1, 5};
+        testMatrixArray[2] = new double[]{1, 3, 4, -2};
+        testMatrixArray[3] = new double[]{4, 2, 2, 1};
+        Matrix testMatrix = new Matrix(testMatrixArray);
+        System.out.println("TEST_MATRIX: " + testMatrix.toString());
+
+        System.out.println("Sum: " + Matrix.sum(testMatrix, matrix2).toString());
+        System.out.println("Difference: " + Matrix.difference(testMatrix, matrix2).toString());
+
+        System.out.println("Determinant: " + testMatrix.getDeterminant());
+        testMatrix.multiplicationByVector(new Vector(new double[]{1, 1, 1, 1}));
+        System.out.println("TEST_MATRIX x vector{1, 1, 1, 1}: " + testMatrix);
         System.out.println();
 
         //проверка конструктора из массива векторов-строк
@@ -42,7 +55,5 @@ public class Main {
 
         matrix3.transpose();
         System.out.println("Transpose Matrix3: " + matrix3.toString());
-
-
     }
 }
