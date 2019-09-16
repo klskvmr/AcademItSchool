@@ -165,7 +165,7 @@ public class Matrix {
         return calculateDeterminant(matrix);
     }
 
-    public Vector multiplicationByVector(Vector vector) {
+    public Vector multiply(Vector vector) {
         if (vector.getSize() == 0) {
             throw new IllegalArgumentException("The length of the vector can't be equal 0!");
         }
@@ -238,7 +238,7 @@ public class Matrix {
         return difference;
     }
 
-    public static Matrix multiplication(Matrix matrix, Matrix matrix1) {
+    public static Matrix multiply(Matrix matrix, Matrix matrix1) {
         if ((matrix.rows[0].getSize() != matrix1.rows.length)) {
             throw new IllegalArgumentException("Matrices are not consistent! " +
                     "The number of columns of the first matrix should be equal to the number of rows of the second");

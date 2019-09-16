@@ -27,14 +27,14 @@ public class Main {
         Matrix testMatrix = new Matrix(testMatrixArray);
         System.out.println("TEST_MATRIX: " + testMatrix.toString());
 
-        System.out.println("MULTIPLICATION: " + Matrix.multiplication(matrix2, testMatrix));
+        System.out.println("MULTIPLICATION: " + Matrix.multiply(matrix2, testMatrix));
 
         System.out.println("Sum: " + Matrix.sum(testMatrix, matrix2).toString());
         System.out.println("Difference: " + Matrix.difference(testMatrix, matrix2).toString());
 
         System.out.println("Determinant: " + testMatrix.getDeterminant());
 
-        System.out.println("TEST_MATRIX x vector{1, 1, 1, 1}: " + testMatrix.multiplicationByVector(new Vector(new double[]{1, 1, 1, 1})));
+        System.out.println("TEST_MATRIX x vector{1, 1, 1, 1}: " + testMatrix.multiply(new Vector(new double[]{1, 1, 1, 1})));
         System.out.println();
 
         //проверка конструктора из массива векторов-строк
