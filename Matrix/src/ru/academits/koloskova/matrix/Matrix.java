@@ -2,6 +2,8 @@ package ru.academits.koloskova.matrix;
 
 import ru.academits.koloskova.vector.Vector;
 
+import java.util.Arrays;
+
 public class Matrix {
     private Vector[] rows;
 
@@ -164,13 +166,20 @@ public class Matrix {
     }
 
     public Vector multiplicationByVector(Vector vector) {
-        if(vector.getSize() == 0){
+        if (vector.getSize() == 0) {
             throw new IllegalArgumentException("The length of the vector can't be equal 0!");
         }
 
         if (vector.getSize() > rows[0].getSize()) {
             throw new IllegalArgumentException("The length of the vector must match the number of matrix columns");
         }
+
+        double[] components = new double[rows.length];
+
+        for (int i = 0; i < vector.getSize(); i++) {
+            components[i] = vector.getElement(i);
+        }
+        vector = new Vector(components);
 
         Vector result = new Vector(rows.length);
 
