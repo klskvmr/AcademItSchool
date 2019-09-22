@@ -202,7 +202,7 @@ public class Matrix {
             throw new IllegalArgumentException("The length of the vector can't be equal 0!");
         }
 
-        if (vector.getSize() == rows[0].getSize()) {
+        if (vector.getSize() != rows[0].getSize()) {
             throw new IllegalArgumentException("The length of the vector must match the number of matrix columns");
         }
 
