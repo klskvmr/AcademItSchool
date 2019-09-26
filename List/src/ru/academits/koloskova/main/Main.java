@@ -35,13 +35,13 @@ public class Main {
         singlyLinkedList.print();
 
         System.out.println();
-        System.out.println("Удален: " + singlyLinkedList.remove(2));
+        System.out.println("Was deleted: " + singlyLinkedList.remove(2));
 
-        System.out.println();
+        System.out.println("Current list: ");
         singlyLinkedList.print();
         System.out.println();
 
-        System.out.println(singlyLinkedList.removeByData(6));
+        System.out.println("is delete? " + singlyLinkedList.removeByData(6));
         singlyLinkedList.print();
 
         System.out.println();

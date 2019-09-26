@@ -121,9 +121,11 @@ public class SinglyLinkedList<T> {
     }
 
     public void revert() {
-        int count1 = count;
-        for (ListItem<T> p = head; p != null; p = p.getNext()) {
-            addFirst(p.getData());
+        for (ListItem<T> prev  = null, p = head; p != null; prev = p, p = p.getNext()) {
+
+            p.setNext(prev);
+
+
         }
     }
 
