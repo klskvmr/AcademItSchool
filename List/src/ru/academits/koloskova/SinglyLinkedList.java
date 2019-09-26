@@ -89,19 +89,17 @@ public class SinglyLinkedList<T> {
         boolean isRemove = false;
 
         while (head.getData().equals(data)) {
-            removeFirst();
+            head = head.getNext();
 
             isRemove = true;
+            count--;
         }
 
-        for (ListItem<T> p = head;
-//             prev = head;
-             p.getNext() != null;
-//             prev = p,
-             p = p.getNext()) {
+        for (ListItem<T> p = head.getNext(), prev = head;
+             p != null; prev = p, p = p.getNext()) {
 
-            if (p.getNext().getData().equals(data)) {
-                p.setNext(p.getNext().getNext());
+            if (p.getData().equals(data)) {
+                prev.setNext(p.getNext());
 
                 isRemove = true;
                 count--;
@@ -121,16 +119,23 @@ public class SinglyLinkedList<T> {
     }
 
     public void revert() {
-        for (ListItem<T> prev  = null, p = head; p != null; prev = p, p = p.getNext()) {
 
-            p.setNext(prev);
-
-
-        }
+//        T t = null;
+//        for (ListItem<T> p = head.getNext(), prev = head;
+//             p != null; prev = p, p = p.getNext()) {
+//
+//            addFirst(p.getData());
+//        }
     }
 
     public SinglyLinkedList<T> copy() {
-        return null;
+        SinglyLinkedList<T> copy = new SinglyLinkedList<>();
+
+        for (ListItem<T> p = head; p != null; p = p.getNext()) {
+            copy.addFirst(p.getData());
+        }
+        copy.revert();
+        return copy;
     }
 
     public void print() {
