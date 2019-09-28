@@ -5,17 +5,49 @@ public class SinglyLinkedList<T> {
     private int count;
 
     public SinglyLinkedList() {
+        head = null;
+        count = 0;
+    }
+
+    public SinglyLinkedList(SinglyLinkedList<T> list) {
+        list.checkHead();
+
+        head = new ListItem<>(list.head.getData());
+
+        ListItem<T> listItemCopy = head;
+
+        for (ListItem<T> p = list.head;
+             p.getNext() != null;
+             listItemCopy = listItemCopy.getNext(), p = p.getNext()) {
+            listItemCopy.setNext(new ListItem<>(p.getNext().getData()));
+        }
+
+        count = list.count;
+    }
+
+    private void checkHead() {
+        if (head == null) {
+            throw new NullPointerException("List is empty");
+        }
+    }
+
+    private void checkInputIndex(int index) {
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException("Index is out of list's bounds");
+        }
     }
 
     public int getSize() {
         return count;
     }
 
-    public T getFirstElem() {
+    public T getFirst() {
         return head.getData();
     }
 
     public T getData(int index) {
+        checkInputIndex(index);
+
         ListItem<T> p = head;
         for (int i = 0; i < index; i++) {
             p = p.getNext();
@@ -38,15 +70,14 @@ public class SinglyLinkedList<T> {
     }
 
     public T remove(int index) {
-        if (index < 0 || index >= count) {
-            throw new IllegalArgumentException("Элементом с заданным индексом в списке не существует");
-        }
+        checkInputIndex(index);
 
         if (index == 0) {
             return removeFirst();
         }
 
         ListItem<T> p = head;
+
         //цикл доходит до элемента перед удаляемым
         for (int i = 0; i < index - 1; i++) {
             p = p.getNext();
@@ -67,7 +98,7 @@ public class SinglyLinkedList<T> {
 
     public void add(int index, T data) {
         if (index < 0 || index > count) {
-            throw new IllegalArgumentException("Нельзя вставить элемент с заданным индексом");
+            throw new IllegalArgumentException("You cannot add an item with such an index");
         }
 
         if (index == 0) {
@@ -97,8 +128,8 @@ public class SinglyLinkedList<T> {
 
         for (ListItem<T> p = head.getNext(), prev = head;
              p != null; prev = p, p = p.getNext()) {
-
             if (p.getData().equals(data)) {
+
                 prev.setNext(p.getNext());
 
                 isRemove = true;
@@ -119,23 +150,33 @@ public class SinglyLinkedList<T> {
     }
 
     public void revert() {
+        checkHead();
 
-//        T t = null;
-//        for (ListItem<T> p = head.getNext(), prev = head;
-//             p != null; prev = p, p = p.getNext()) {
-//
-//            addFirst(p.getData());
-//        }
+        ListItem<T> prev = null;
+
+        for (ListItem<T> p = head; p != null; ) {
+            ListItem<T> next = p.getNext();
+
+            p.setNext(prev);
+
+            prev = p;
+            p = next;
+        }
+
+        head = prev;
     }
 
+
     public SinglyLinkedList<T> copy() {
-        SinglyLinkedList<T> copy = new SinglyLinkedList<>();
+        SinglyLinkedList<T> copiedList = new SinglyLinkedList<>();
 
         for (ListItem<T> p = head; p != null; p = p.getNext()) {
-            copy.addFirst(p.getData());
+            copiedList.addFirst(p.getData());
         }
-        copy.revert();
-        return copy;
+
+        copiedList.revert();
+
+        return copiedList;
     }
 
     public void print() {
