@@ -29,8 +29,10 @@ public class Main {
 
         System.out.println("MULTIPLICATION: " + Matrix.multiply(matrix2, testMatrix));
 
-        System.out.println("Sum: " + Matrix.sum(testMatrix, matrix2).toString());
-        System.out.println("Difference: " + Matrix.difference(testMatrix, matrix2).toString());
+        testMatrix.sum(matrix2);
+        System.out.println("Sum: " + testMatrix.toString());
+        testMatrix.difference(matrix2);
+        System.out.println("Difference: " + testMatrix.toString());
 
         System.out.println("Determinant: " + testMatrix.getDeterminant());
 

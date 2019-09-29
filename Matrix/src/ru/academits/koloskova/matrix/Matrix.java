@@ -61,10 +61,6 @@ public class Matrix {
             }
         }
 
-        if (maxRowLength == 0) {
-            throw new IllegalArgumentException("The number of columns cannot be equal to 0.");
-        }
-
         this.rows = new Vector[rows.length];
 
         for (int i = 0; i < this.rows.length; i++) {
@@ -87,7 +83,7 @@ public class Matrix {
     }
 
     public Vector getRow(int index) {
-        if ((index < 0) || (index >= this.rows.length)) {
+        if ((index < 0) || (index >= rows.length)) {
             throw new IndexOutOfBoundsException("Row with this index doesn't exists");
         }
 
@@ -95,10 +91,10 @@ public class Matrix {
     }
 
     public void setRow(int index, Vector row) {
-        if ((index < 0) || (index >= this.rows.length)) {
+        if ((index < 0) || (index >= rows.length)) {
             throw new IndexOutOfBoundsException("Row with this index doesn't exists");
         }
-        if (row.getSize() != this.rows[0].getSize()) {
+        if (row.getSize() != getColumnsAmount()) {
             throw new IllegalArgumentException("the dimension of the given row must correspond to the size of the row being changed");
         }
 
@@ -106,7 +102,7 @@ public class Matrix {
     }
 
     public Vector getColumn(int index) {
-        if ((index < 0) || (index >= this.rows[0].getSize())) {
+        if ((index < 0) || (index >= getColumnsAmount())) {
             throw new IndexOutOfBoundsException("Column with this index doesn't exists");
         }
 
@@ -181,11 +177,11 @@ public class Matrix {
     }
 
     public double getDeterminant() {
-        if (this.rows.length != this.rows[0].getSize()) {
+        if (rows.length != getColumnsAmount()) {
             throw new IllegalArgumentException("The determinant can only be calculated for a square matrix");
         }
 
-        int matrixSize = this.rows.length;
+        int matrixSize = rows.length;
         double[][] matrix = new double[matrixSize][matrixSize];
 
         for (int i = 0; i < matrixSize; i++) {
@@ -198,11 +194,7 @@ public class Matrix {
     }
 
     public Vector multiply(Vector vector) {
-        if (vector.getSize() == 0) {
-            throw new IllegalArgumentException("The length of the vector can't be equal 0!");
-        }
-
-        if (vector.getSize() != rows[0].getSize()) {
+        if (vector.getSize() != getColumnsAmount()) {
             throw new IllegalArgumentException("The length of the vector must match the number of matrix columns");
         }
 
@@ -216,7 +208,7 @@ public class Matrix {
     }
 
     public void sum(Matrix matrix) {
-        if ((rows.length != matrix.rows.length) || (rows[0].getSize() != matrix.rows[0].getSize())) {
+        if ((rows.length != matrix.rows.length) || (getColumnsAmount() != matrix.getColumnsAmount())) {
             throw new IllegalArgumentException("Matrices must be of the same dimension!");
         }
 
@@ -226,7 +218,7 @@ public class Matrix {
     }
 
     public void difference(Matrix matrix) {
-        if ((rows.length != matrix.rows.length) || (rows[0].getSize() != matrix.rows[0].getSize())) {
+        if ((rows.length != matrix.rows.length) || (getColumnsAmount() != matrix.getColumnsAmount())) {
             throw new IllegalArgumentException("Matrices must be of the same dimension!");
         }
 
@@ -236,7 +228,7 @@ public class Matrix {
     }
 
     public static Matrix sum(Matrix matrix1, Matrix matrix2) {
-        if ((matrix1.rows.length != matrix2.rows.length) || (matrix1.rows[0].getSize() != matrix2.rows[0].getSize())) {
+        if ((matrix1.rows.length != matrix2.rows.length) || (matrix1.getColumnsAmount() != matrix2.getColumnsAmount())) {
             throw new IllegalArgumentException("Matrices must be of the same dimension!");
         }
 
@@ -250,7 +242,7 @@ public class Matrix {
     }
 
     public static Matrix difference(Matrix matrix1, Matrix matrix2) {
-        if ((matrix1.rows.length != matrix2.rows.length) || (matrix1.rows[0].getSize() != matrix2.rows[0].getSize())) {
+        if ((matrix1.rows.length != matrix2.rows.length) || (matrix1.getColumnsAmount() != matrix2.getColumnsAmount())) {
             throw new IllegalArgumentException("Matrices must be of the same dimension!");
         }
 
@@ -263,20 +255,20 @@ public class Matrix {
         return difference;
     }
 
-    public static Matrix multiply(Matrix matrix, Matrix matrix1) {
-        if ((matrix.rows[0].getSize() != matrix1.rows.length)) {
+    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {
+        if ((matrix1.getColumnsAmount() != matrix2.rows.length)) {
             throw new IllegalArgumentException("Matrices are not consistent! " +
                     "The number of columns of the first matrix should be equal to the number of rows of the second");
         }
 
-        int rowsAmount = matrix.rows.length;
-        int columnsAmount = matrix1.rows[0].getSize();
+        int rowsAmount = matrix1.rows.length;
+        int columnsAmount = matrix2.getColumnsAmount();
 
         Matrix result = new Matrix(rowsAmount, columnsAmount);
 
         for (int i = 0; i < rowsAmount; i++) {
             for (int j = 0; j < columnsAmount; j++) {
-                result.rows[i].setElement(j, Vector.getScalarProduct(matrix.rows[i], matrix1.getColumn(j)));
+                result.rows[i].setElement(j, Vector.getScalarProduct(matrix1.rows[i], matrix2.getColumn(j)));
             }
         }
 
