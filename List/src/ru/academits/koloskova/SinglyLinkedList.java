@@ -115,6 +115,7 @@ public class SinglyLinkedList<T> {
         count++;
     }
 
+    //удаляются все элементы с заданным значением :)
     public boolean removeByData(T data) {
         boolean isRemove = false;
 
@@ -128,9 +129,9 @@ public class SinglyLinkedList<T> {
         for (ListItem<T> p = head.getNext(), prev = head;
              p != null; prev = p, p = p.getNext()) {
             if (p.getData().equals(data)) {
-
                 prev.setNext(p.getNext());
 
+                p = prev;
                 isRemove = true;
                 count--;
             }
