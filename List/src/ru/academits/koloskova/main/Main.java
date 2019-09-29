@@ -52,22 +52,22 @@ public class Main {
         singlyLinkedList.print();
         System.out.println();
 
-        System.out.println("is remove? " + singlyLinkedList.removeByData(6));
+        System.out.println("Items with data were existed? " + singlyLinkedList.removeByData(6));
         singlyLinkedList.print();
 
         System.out.println();
-        System.out.println("Revert list: ");
+        System.out.println("Revert list:");
         singlyLinkedList.revert();
         singlyLinkedList.print();
         System.out.println();
 
-        System.out.println("Copied list: ");
+        System.out.println("Copied list:");
         SinglyLinkedList<Integer> copiedList = singlyLinkedList.copy();
         copiedList.print();
         System.out.println();
 
-        System.out.println("Copy constructor: ");
-        SinglyLinkedList<Integer> integerSinglyLinkedList = new SinglyLinkedList<>(copiedList);
-        integerSinglyLinkedList.print();
+        System.out.println("Copy constructor:");
+        SinglyLinkedList<Integer> copiedByConstructorList = new SinglyLinkedList<>(copiedList);
+        copiedByConstructorList.print();
     }
 }

@@ -16,8 +16,7 @@ public class SinglyLinkedList<T> {
 
         ListItem<T> listItemCopy = head;
 
-        for (ListItem<T> p = list.head;
-             p.getNext() != null;
+        for (ListItem<T> p = list.head; p.getNext() != null;
              listItemCopy = listItemCopy.getNext(), p = p.getNext()) {
             listItemCopy.setNext(new ListItem<>(p.getNext().getData()));
         }
@@ -166,15 +165,19 @@ public class SinglyLinkedList<T> {
         head = prev;
     }
 
-
     public SinglyLinkedList<T> copy() {
         SinglyLinkedList<T> copiedList = new SinglyLinkedList<>();
 
-        for (ListItem<T> p = head; p != null; p = p.getNext()) {
-            copiedList.addFirst(p.getData());
+        copiedList.head = new ListItem<>(head.getData());
+
+        ListItem<T> listItemCopy = copiedList.head;
+
+        for (ListItem<T> p = head; p.getNext() != null;
+             listItemCopy = listItemCopy.getNext(), p = p.getNext()) {
+            listItemCopy.setNext(new ListItem<>(p.getNext().getData()));
         }
 
-        copiedList.revert();
+        copiedList.count = count;
 
         return copiedList;
     }
