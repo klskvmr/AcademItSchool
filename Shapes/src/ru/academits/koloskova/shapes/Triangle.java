@@ -1,4 +1,4 @@
-package ru.academits.koloskova.vector.shapes;
+package ru.academits.koloskova.shapes;
 
 public class Triangle implements Shape {
     private static final double epsilon = 1.0e-10;

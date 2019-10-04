@@ -1,38 +1,40 @@
-package ru.academits.koloskova.vector.shapes;
+package ru.academits.koloskova.shapes;
 
-public class Square implements Shape {
-    private double length;
+public class Rectangle implements Shape {
+    private double height;
+    private double width;
 
-    public Square(double length) {
-        this.length = length;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
+    public Rectangle(double height, double width) {
+        this.height = height;
+        this.width = width;
     }
 
     @Override
     public double getWidth() {
-        return length;
+        return width;
     }
 
     @Override
     public double getHeight() {
-        return length;
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     @Override
     public double getArea() {
-        return length * length;
+        return height * width;
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * length;
+        return 2 * (height + width);
     }
 
     @Override
@@ -46,18 +48,15 @@ public class Square implements Shape {
 
     @Override
     public boolean equals(Object object) {
-        // проверили что передали сам объект
         if (object == this) {
             return true;
         }
-        // отсеяли null и объекты других классов
         if (object == null || object.getClass() != getClass()) {
             return false;
         }
-        // привели объект к Square
-        Square square = (Square) object;
-        // проверили равенство полей
-        return length == square.length;
+
+        Rectangle rectangle = (Rectangle) object;
+        return height == rectangle.height && width == rectangle.width;
     }
 
     @Override
@@ -65,7 +64,8 @@ public class Square implements Shape {
         final int prime = 17;
         int hash = 1;
 
-        hash = prime * hash + Double.hashCode(length);
+        hash = prime * hash + Double.hashCode(height);
+        hash = prime * hash + Double.hashCode(width);
 
         return hash;
     }

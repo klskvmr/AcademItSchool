@@ -2,25 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e35542b-689f-496f-aeae-27ffbb276e69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List/src/ru/academits/koloskova/list/ListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/Range.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/range/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/comparator/AreaComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/comparator/PerimeterComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayList/ArrayList.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/ArrayList.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/koloskova/ListItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/koloskova/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/koloskova/list/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/koloskova/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/koloskova/list/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/list/matrix/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/matrix/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/koloskova/list/matrix/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Range/Range.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Range/Range.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/vector/range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/list/vector/range/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/vector/range/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/academits/koloskova/list/vector/range/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/Shapes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/comparator/AreaComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/comparator/AreaComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/comparator/PerimeterComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/comparator/PerimeterComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/vector/shapes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/koloskova/shapes/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/Vector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/Vector.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/list/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/vector/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/koloskova/list/vector/main/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -43,7 +68,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.EditorConfig" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,20 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.range.main.Main" />
-      <module name="Range" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.academits.koloskova.range.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (5)">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.matrix.main.Main" />
       <module name="Matrix" />
@@ -90,6 +111,32 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.academits.koloskova.vector.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.main.Main" />
+      <module name="List" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.koloskova.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.koloskova.list.main.Main" />
+      <module name="List" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.koloskova.list.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +208,9 @@
       <workItem from="1566189121203" duration="123000" />
       <workItem from="1566189389470" duration="626000" />
       <workItem from="1567252990026" duration="3524000" />
+      <workItem from="1569508726293" duration="1755000" />
+      <workItem from="1569511405804" duration="16557000" />
+      <workItem from="1570118339892" duration="9481000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit!">
       <created>1562405378869</created>
@@ -209,20 +259,5 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

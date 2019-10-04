@@ -1,4 +1,4 @@
-package ru.academits.koloskova.vector.shapes;
+package ru.academits.koloskova.shapes;
 
 public interface Shape {
     double getWidth();

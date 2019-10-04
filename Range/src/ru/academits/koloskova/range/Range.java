@@ -1,4 +1,4 @@
-package ru.academits.koloskova.vector.range;
+package ru.academits.koloskova.range;
 
 public class Range {
     private double from;

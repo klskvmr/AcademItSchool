@@ -1,6 +1,6 @@
-package ru.academits.koloskova.main;
+package ru.academits.koloskova.list.main;
 
-import ru.academits.koloskova.SinglyLinkedList;
+import ru.academits.koloskova.list.SinglyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,7 +44,7 @@ public class Main {
         singlyLinkedList.add(4, 4444);
 
         System.out.println("Current list:");
-        singlyLinkedList.print();
+        System.out.println(singlyLinkedList.toString());
 
         System.out.println();
         System.out.println("Delete elem by index 2 with data: " + singlyLinkedList.remove(2));
@@ -52,7 +52,7 @@ public class Main {
         singlyLinkedList.print();
         System.out.println();
 
-        System.out.println("Items with data were existed? " + singlyLinkedList.removeByData(6));
+        System.out.println("Items with data were existed? " + singlyLinkedList.removeByData(null));
         singlyLinkedList.print();
 
         System.out.println();
@@ -61,13 +61,17 @@ public class Main {
         singlyLinkedList.print();
         System.out.println();
 
-        System.out.println("Copied list:");
-        SinglyLinkedList<Integer> copiedList = singlyLinkedList.copy();
-        copiedList.print();
-        System.out.println();
-
         System.out.println("Copy constructor:");
-        SinglyLinkedList<Integer> copiedByConstructorList = new SinglyLinkedList<>(copiedList);
+        SinglyLinkedList<Integer> copiedByConstructorList = new SinglyLinkedList<>(singlyLinkedList);
         copiedByConstructorList.print();
+
+        SinglyLinkedList<Integer> emptyList = new SinglyLinkedList<>();
+        SinglyLinkedList<Integer> copiedByConstructorEmptyList = new SinglyLinkedList<>(emptyList);
+
+        System.out.println();
+        copiedByConstructorEmptyList.addFirst(null);
+        copiedByConstructorEmptyList.addFirst(1);
+        copiedByConstructorEmptyList.removeByData(null);
+        copiedByConstructorEmptyList.print();
     }
 }
