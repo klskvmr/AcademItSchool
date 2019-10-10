@@ -42,9 +42,10 @@ public class Main {
         System.out.println("Add 2 elem's by indexes 3 and 4.");
         singlyLinkedList.add(3, 333);
         singlyLinkedList.add(4, 4444);
+        singlyLinkedList.add(0, null);
 
         System.out.println("Current list:");
-        System.out.println(singlyLinkedList.toString());
+        System.out.println(singlyLinkedList);
 
         System.out.println();
         System.out.println("Delete elem by index 2 with data: " + singlyLinkedList.remove(2));

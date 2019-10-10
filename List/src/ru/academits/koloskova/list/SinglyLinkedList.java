@@ -1,5 +1,7 @@
 package ru.academits.koloskova.list;
 
+import java.util.Objects;
+
 public class SinglyLinkedList<T> {
     private ListItem<T> head;
     private int count;
@@ -26,7 +28,7 @@ public class SinglyLinkedList<T> {
 
     private void checkHead() {
         if (head == null) {
-            throw new IllegalArgumentException("List is empty!");
+            throw new NullPointerException("List is empty!");
         }
     }
 
@@ -64,7 +66,6 @@ public class SinglyLinkedList<T> {
     }
 
     public T setData(int index, T data) {
-        checkHead();
         checkInputIndex(index);
 
         ListItem<T> p = getNode(index);
@@ -118,37 +119,15 @@ public class SinglyLinkedList<T> {
     public boolean removeByData(T data) {
         checkHead();
 
-        if (data == null) {
-            if ((head.getData() == null)) {
-                head = head.getNext();
-
-                count--;
-                return true;
-            }
-
-            for (ListItem<T> p = head.getNext(), prev = head;
-                 p != null; prev = p, p = p.getNext()) {
-                if (p.getData() == null) {
-                    prev.setNext(p.getNext());
-
-                    count--;
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        if (head.getData().equals(data)) {
+        if (Objects.equals(head.getData(), data)) {
             head = head.getNext();
 
             count--;
             return true;
         }
 
-        for (ListItem<T> p = head.getNext(), prev = head;
-             p != null; prev = p, p = p.getNext()) {
-            if (p.getData().equals(data)) {
+        for (ListItem<T> p = head.getNext(), prev = head; p != null; prev = p, p = p.getNext()) {
+            if (Objects.equals(p.getData(), data)) {
                 prev.setNext(p.getNext());
 
                 count--;
