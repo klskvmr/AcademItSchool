@@ -27,12 +27,14 @@ public class Main {
 //            }
 //        }
 
-        for (int i = 0; i < integerList1.size(); i++) {
-            if (integerList1.get(i) % 2 == 0) {
-                integerList1.remove(i);
-                i--;
-            }
-        }
+        integerList1.removeIf(number -> number % 2 == 0);
+
+//        for (int i = 0; i < integerList1.size(); i++) {
+//            if (integerList1.get(i) % 2 == 0) {
+//                integerList1.remove(i);
+//                i--;
+//            }
+//        }
 
         integerList1.removeIf(number -> number % 2 == 0);
 
