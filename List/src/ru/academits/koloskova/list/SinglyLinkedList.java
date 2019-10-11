@@ -1,5 +1,6 @@
 package ru.academits.koloskova.list;
 
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class SinglyLinkedList<T> {
@@ -28,7 +29,7 @@ public class SinglyLinkedList<T> {
 
     private void checkHead() {
         if (head == null) {
-            throw new NullPointerException("List is empty!");
+            throw new NoSuchElementException("List is empty!");
         }
     }
 
@@ -59,7 +60,6 @@ public class SinglyLinkedList<T> {
     }
 
     public T getData(int index) {
-        checkHead();
         checkInputIndex(index);
 
         return getNode(index).getData();
@@ -77,7 +77,6 @@ public class SinglyLinkedList<T> {
     }
 
     public T remove(int index) {
-        checkHead();
         checkInputIndex(index);
 
         if (index == 0) {
@@ -117,7 +116,9 @@ public class SinglyLinkedList<T> {
     }
 
     public boolean removeByData(T data) {
-        checkHead();
+        if (head == null) {
+            return false;
+        }
 
         if (Objects.equals(head.getData(), data)) {
             head = head.getNext();

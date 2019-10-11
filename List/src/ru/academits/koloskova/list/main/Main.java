@@ -74,5 +74,8 @@ public class Main {
         copiedByConstructorEmptyList.addFirst(1);
         copiedByConstructorEmptyList.removeByData(null);
         copiedByConstructorEmptyList.print();
+
+        SinglyLinkedList<String> stringSinglyLinkedList = new SinglyLinkedList<>();
+        System.out.println(stringSinglyLinkedList.removeByData("pp"));
     }
 }
