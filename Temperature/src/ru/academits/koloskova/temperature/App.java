@@ -12,7 +12,7 @@ public class App {
             } catch (Exception ignored) {
             }
 
-            View view = new View("My first GUI application");
+            View view = new View("My temperature transfer GUI application");
             Model model = new Model();
             Controller controller = new Controller(model, view);
             controller.initController();
