@@ -1,5 +1,8 @@
 package ru.academits.koloskova.temperature;
 
+import ru.academits.koloskova.temperature.pojo.Degrees;
+import ru.academits.koloskova.temperature.pojo.Scale;
+
 public class Model {
     private Degrees inputDegrees;
     private Degrees outputDegrees;

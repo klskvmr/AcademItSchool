@@ -1,4 +1,4 @@
-package ru.academits.koloskova.temperature;
+package ru.academits.koloskova.temperature.pojo;
 
 public class Degrees {
     private double count;

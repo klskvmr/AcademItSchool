@@ -1,5 +1,7 @@
 package ru.academits.koloskova.temperature;
 
+import ru.academits.koloskova.temperature.pojo.Scale;
+
 import javax.swing.*;
 
 public class Controller {
