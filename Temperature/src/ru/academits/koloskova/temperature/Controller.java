@@ -9,7 +9,8 @@ public class Controller
 {
     private Model model;
     private View view;
-//
+
+    private ActionListener aL = new Listener();
 //    private ActionListener aL = new ActionListener() {
 //        @Override
 //        public void actionPerformed(ActionEvent e) {
@@ -25,7 +26,7 @@ public class Controller
     }
 
     void initView() {
-        view.getConvertButton().addActionListener(e -> {view.getOutputDegrees().setText("Hello");});
+        view.getConvertButton().addActionListener(aL);
 
 //        view.getOutputDegrees().setText(model.getOutputDegrees().getCount() + " ");
     }
@@ -36,6 +37,13 @@ public class Controller
 //        view.getConvert().addActionListener(e -> view.getOutputDegrees().setText("Hello"));
 
         view.getConvertButton().addActionListener(e -> {view.getOutputDegrees().setText("Hello");});
+    }
+
+    class Listener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            view.getOutputDegrees().setText("Hello!");
+        }
     }
 
 //    @Override
