@@ -7,13 +7,12 @@ class View {
     private JFrame frame;
     private JPanel panel;
 
-    private JLabel temperatureConversation;
     private JComboBox fromScales;
     private JComboBox toScales;
     private JTextField inputDegrees;
     private JLabel outputDegrees;
     private JLabel degrees;
-    private JButton convert;
+    private JButton convertButton;
 
     View(String title) {
         SwingUtilities.invokeLater(() -> {
@@ -29,14 +28,13 @@ class View {
             frame.add(panel);
             panel.setLayout(new GridBagLayout());
 
-            temperatureConversation = new JLabel("Temperature conversation");
             String[] scales = new String[]{"Celsius", "Fahrenheit", "Kelvin"};
             fromScales = new JComboBox(scales);
             toScales = new JComboBox(scales);
             inputDegrees = new JTextField("0");
-            outputDegrees = new JLabel("100");
+            outputDegrees = new JLabel();
             degrees = new JLabel("degrees");
-            convert = new JButton("convert");
+            convertButton = new JButton("convert");
 
             GridBagConstraints constraints1 = new GridBagConstraints();
             constraints1.weightx = 0;
@@ -45,7 +43,7 @@ class View {
             constraints1.gridy = 0;
             constraints1.gridwidth = 4;
             constraints1.gridheight = 1;
-            panel.add(temperatureConversation, constraints1);
+            panel.add(new JLabel("Temperature conversation"), constraints1);
 
             GridBagConstraints constraints2 = new GridBagConstraints();
             constraints2.weightx = 0;
@@ -147,7 +145,7 @@ class View {
             constraints12.gridy = 4;
             constraints12.gridwidth = 4;
             constraints12.gridheight = 1;
-            panel.add(convert, constraints12);
+            panel.add(convertButton, constraints12);
 
             panel.revalidate();
         });
@@ -166,30 +164,6 @@ class View {
         return frame;
     }
 
-    public JFrame getFrame() {
-        return frame;
-    }
-
-    public void setFrame(JFrame frame) {
-        this.frame = frame;
-    }
-
-    public JPanel getPanel() {
-        return panel;
-    }
-
-    public void setPanel(JPanel panel) {
-        this.panel = panel;
-    }
-
-    public JLabel getTemperatureConversation() {
-        return temperatureConversation;
-    }
-
-    public void setTemperatureConversation(JLabel temperatureConvertation) {
-        this.temperatureConversation = temperatureConvertation;
-    }
-
     public JLabel getOutputDegrees() {
         return outputDegrees;
     }
@@ -204,14 +178,6 @@ class View {
 
     public void setInputDegrees(JTextField inputDegrees) {
         this.inputDegrees = inputDegrees;
-    }
-
-    public JLabel getDegrees() {
-        return degrees;
-    }
-
-    public void setDegrees(JLabel degrees) {
-        this.degrees = degrees;
     }
 
     public JComboBox getFromScales() {
@@ -230,11 +196,11 @@ class View {
         this.toScales = toScales;
     }
 
-    public JButton getConvert() {
-        return convert;
+    public JButton getConvertButton() {
+        return convertButton;
     }
 
-    public void setConvert(JButton convert) {
-        this.convert = convert;
+    public void setConvertButton(JButton convertButton) {
+        this.convertButton = convertButton;
     }
 }

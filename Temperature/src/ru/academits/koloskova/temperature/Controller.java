@@ -1,35 +1,45 @@
 package ru.academits.koloskova.temperature;
 
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Controller implements ActionListener, ListSelectionListener {
+public class Controller
+        //implements
+       // ActionListener, ListSelectionListener
+{
     private Model model;
     private View view;
+//
+//    private ActionListener aL = new ActionListener() {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            view.getOutputDegrees().setText("Hello");
+//        }
+//    };
 
-    public Controller(Model model, View view) {
+    Controller(Model model, View view) {
         this.model = model;
         this.view = view;
+
+        initView();
     }
 
-    private void initView() {
+    void initView() {
+        view.getConvertButton().addActionListener(e -> {view.getOutputDegrees().setText("Hello");});
+
+//        view.getOutputDegrees().setText(model.getOutputDegrees().getCount() + " ");
     }
 
-    private void initController(){
-        view.getConvert().addActionListener(e -> translateTemperature());
+    //добавляем экшн лисенеры
+    void initController() {
+//        view.getConvert().addActionListener(e -> model.convert());
+//        view.getConvert().addActionListener(e -> view.getOutputDegrees().setText("Hello"));
+
+        view.getConvertButton().addActionListener(e -> {view.getOutputDegrees().setText("Hello");});
     }
 
-    private void translateTemperature(){
-        model.getInputDegrees().setCount(Double.parseDouble(view.getInputDegrees().getText()));
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-    }
-
-    @Override
-    public void valueChanged(ListSelectionEvent e) {
-    }
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        view.getOutputDegrees().setText("Hello");
+//    }
 }

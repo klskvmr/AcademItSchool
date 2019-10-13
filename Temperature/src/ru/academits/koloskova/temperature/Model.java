@@ -4,7 +4,17 @@ public class Model {
     private Degrees inputDegrees;
     private Degrees outputDegrees;
 
-    public Model() {
+    Model() {
+    }
+
+    {
+        inputDegrees = new Degrees();
+        inputDegrees.setCount(0);
+        inputDegrees.setScale(Scale.CELSIUS);
+
+        outputDegrees = new Degrees();
+        outputDegrees.setCount(0);
+        outputDegrees.setScale(Scale.CELSIUS);
     }
 
     public Degrees getInputDegrees() {
@@ -15,7 +25,7 @@ public class Model {
         this.inputDegrees = inputDegrees;
     }
 
-    public Degrees getOutputDegrees() {
+    Degrees getOutputDegrees() {
         return outputDegrees;
     }
 
@@ -23,47 +33,47 @@ public class Model {
         this.outputDegrees = outputDegrees;
     }
 
-    public double convert() {
+    void convert() {
         switch (inputDegrees.getScale()) {
             case CELSIUS:
-                return convertCelsius();
+                convertCelsius();
             case FAHRENHEIT:
-                return convertFahrenheit();
+                convertFahrenheit();
             default:
-                return convertKelvin();
+                convertKelvin();
         }
     }
 
-    private double convertCelsius() {
+    private void convertCelsius() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                return inputDegrees.getCount();
+                outputDegrees.setCount(0);
             case FAHRENHEIT:
-                return 0;
+                outputDegrees.setCount(inputDegrees.getCount());
             default:
-                return inputDegrees.getCount() + 273.15;
+                outputDegrees.setCount(inputDegrees.getCount());
         }
     }
 
-    private double convertFahrenheit() {
+    private void convertFahrenheit() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                return inputDegrees.getCount();
+                outputDegrees.setCount(inputDegrees.getCount());
             case FAHRENHEIT:
-                return 0;
+                outputDegrees.setCount(inputDegrees.getCount());
             default:
-                return inputDegrees.getCount() + 273.15;
+                outputDegrees.setCount(inputDegrees.getCount());
         }
     }
 
-    private double convertKelvin() {
+    private void convertKelvin() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                return inputDegrees.getCount();
+                outputDegrees.setCount(inputDegrees.getCount());
             case FAHRENHEIT:
-                return 0;
+                outputDegrees.setCount(inputDegrees.getCount());
             default:
-                return inputDegrees.getCount() + 273.15;
+                outputDegrees.setCount(inputDegrees.getCount());
         }
     }
 }
