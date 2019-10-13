@@ -4,17 +4,9 @@ public class Model {
     private Degrees inputDegrees;
     private Degrees outputDegrees;
 
-    Model() {
-    }
-
-    {
-        inputDegrees = new Degrees();
-        inputDegrees.setCount(0);
-        inputDegrees.setScale(Scale.CELSIUS);
-
-        outputDegrees = new Degrees();
-        outputDegrees.setCount(0);
-        outputDegrees.setScale(Scale.CELSIUS);
+    public Model() {
+        inputDegrees = new Degrees(0, Scale.CELSIUS);
+        outputDegrees = new Degrees(0, Scale.CELSIUS);
     }
 
     public Degrees getInputDegrees() {
@@ -37,19 +29,23 @@ public class Model {
         switch (inputDegrees.getScale()) {
             case CELSIUS:
                 convertCelsius();
-            case FAHRENHEIT:
-                convertFahrenheit();
-            default:
+                break;
+            case KELVIN:
                 convertKelvin();
+                break;
+            default:
+                convertFahrenheit();
         }
     }
 
     private void convertCelsius() {
         switch (outputDegrees.getScale()) {
-            case CELSIUS:
-                outputDegrees.setCount(0);
             case FAHRENHEIT:
-                outputDegrees.setCount(inputDegrees.getCount());
+                outputDegrees.setCount(inputDegrees.getCount() * 9 / 5 + 32);
+                break;
+            case KELVIN:
+                outputDegrees.setCount(inputDegrees.getCount() + 273.15);
+                break;
             default:
                 outputDegrees.setCount(inputDegrees.getCount());
         }
@@ -58,9 +54,11 @@ public class Model {
     private void convertFahrenheit() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                outputDegrees.setCount(inputDegrees.getCount());
-            case FAHRENHEIT:
-                outputDegrees.setCount(inputDegrees.getCount());
+                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 32) * 5 / 9));
+                break;
+            case KELVIN:
+                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 32) * 5 / 9 + 273.15));
+                break;
             default:
                 outputDegrees.setCount(inputDegrees.getCount());
         }
@@ -69,9 +67,11 @@ public class Model {
     private void convertKelvin() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                outputDegrees.setCount(inputDegrees.getCount());
+                outputDegrees.setCount(inputDegrees.getCount() - 273.15);
+                break;
             case FAHRENHEIT:
-                outputDegrees.setCount(inputDegrees.getCount());
+                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 273.15) * 9 / 5 + 32));
+                break;
             default:
                 outputDegrees.setCount(inputDegrees.getCount());
         }

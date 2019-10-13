@@ -1,22 +1,10 @@
 package ru.academits.koloskova.temperature;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
 
-public class Controller
-        //implements
-       // ActionListener, ListSelectionListener
-{
+public class Controller {
     private Model model;
     private View view;
-
-    private ActionListener aL = new Listener();
-//    private ActionListener aL = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            view.getOutputDegrees().setText("Hello");
-//        }
-//    };
 
     Controller(Model model, View view) {
         this.model = model;
@@ -26,28 +14,37 @@ public class Controller
     }
 
     void initView() {
-        view.getConvertButton().addActionListener(aL);
-
-//        view.getOutputDegrees().setText(model.getOutputDegrees().getCount() + " ");
     }
 
-    //добавляем экшн лисенеры
     void initController() {
-//        view.getConvert().addActionListener(e -> model.convert());
-//        view.getConvert().addActionListener(e -> view.getOutputDegrees().setText("Hello"));
+        view.getFromScales().addActionListener(e -> {
+            JComboBox box = (JComboBox) e.getSource();
+            String fromScale = (String) box.getSelectedItem();
+            for (Scale scale : Scale.values()) {
+                if (scale.getTitle().equals(fromScale)) {
+                    model.getInputDegrees().setScale(scale);
+                }
+            }
+        });
 
-        view.getConvertButton().addActionListener(e -> {view.getOutputDegrees().setText("Hello");});
+        view.getToScales().addActionListener(e -> {
+            JComboBox box = (JComboBox) e.getSource();
+            String toScale = (String) box.getSelectedItem();
+
+//            String toScale = (String) view.getFromScales().getSelectedItem();
+
+            for (Scale scale : Scale.values()) {
+                if (scale.getTitle().equals(toScale)) {
+                    model.getOutputDegrees().setScale(scale);
+                }
+            }
+        });
+
+        view.getConvertButton().addActionListener(e -> {
+            double inputCount = Double.parseDouble(view.getInputDegrees().getText());
+            model.getInputDegrees().setCount(inputCount);
+            model.convert();
+            view.getOutputDegrees().setText(model.getOutputDegrees().getCount() + "");
+        });
     }
-
-    class Listener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            view.getOutputDegrees().setText("Hello!");
-        }
-    }
-
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        view.getOutputDegrees().setText("Hello");
-//    }
 }

@@ -5,9 +5,13 @@ public enum Scale {
     FAHRENHEIT("Fahrenheit"),
     KELVIN("Kelvin");
 
-    private String string;
+    private String title;
 
-    Scale(String string) {
-        this.string = string;
+    Scale(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

@@ -4,6 +4,18 @@ public class Degrees {
     private double count;
     private Scale scale;
 
+    public Degrees() {
+    }
+
+    public Degrees(Scale scale) {
+        this.scale = scale;
+    }
+
+    public Degrees(double count, Scale scale) {
+        this.count = count;
+        this.scale = scale;
+    }
+
     public Scale getScale() {
         return scale;
     }

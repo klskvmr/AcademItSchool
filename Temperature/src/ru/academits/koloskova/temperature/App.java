@@ -1,10 +1,21 @@
 package ru.academits.koloskova.temperature;
 
+import javax.swing.*;
+
 public class App {
     public static void main(String[] args) {
-        View view = new View("My first GUI application");
-        Model model = new Model();
-        Controller controller = new Controller(model, view);
-        controller.initController();
+        SwingUtilities.invokeLater(() -> {
+            // установка Look and Feel для текущей ОС
+            try {
+                UIManager.setLookAndFeel(
+                        UIManager.getSystemLookAndFeelClassName());
+            } catch (Exception ignored) {
+            }
+
+            View view = new View("My first GUI application");
+            Model model = new Model();
+            Controller controller = new Controller(model, view);
+            controller.initController();
+        });
     }
 }
