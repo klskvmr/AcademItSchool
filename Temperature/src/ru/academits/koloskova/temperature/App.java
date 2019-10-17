@@ -15,7 +15,6 @@ public class App {
             View view = new View("My temperature transfer GUI application");
             Model model = new Model();
             Controller controller = new Controller(model, view);
-            controller.initController();
         });
     }
 }

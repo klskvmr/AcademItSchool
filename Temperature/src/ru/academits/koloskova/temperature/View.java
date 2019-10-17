@@ -4,18 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 
 class View {
-    private JFrame frame;
-    private JPanel panel;
-
     private JComboBox fromScales;
     private JComboBox toScales;
-    private JTextField inputDegrees;
+    private JTextArea inputDegrees;
     private JLabel outputDegrees;
     private JButton convertButton;
 
+    private JPanel panel;
+    private GridBagConstraints constraints;
+
     View(String title) {
-        frame = getFrame(title);
-        panel = new JPanel();
+        JFrame frame = getFrame(title);
+panel = new JPanel();
         frame.add(panel);
         panel.setLayout(new GridBagLayout());
         panel.setBackground(Color.pink);
@@ -23,12 +23,13 @@ class View {
         String[] scales = new String[]{"Celsius", "Fahrenheit", "Kelvin"};
         fromScales = new JComboBox(scales);
         toScales = new JComboBox(scales);
-        inputDegrees = new JTextField("0");
+        inputDegrees = new JTextArea("0");
         outputDegrees = new JLabel();
         convertButton = new JButton("convert");
-        JLabel degrees = new JLabel("degrees");
 
-        GridBagConstraints constraints = new GridBagConstraints();
+        constraints = new GridBagConstraints();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+
         constraints.weightx = 1;
         constraints.weighty = 1;
         constraints.gridx = 0;
@@ -74,6 +75,8 @@ class View {
         constraints.gridheight = 1;
         panel.add(new JLabel("Temperature on new scale"), constraints);
 
+        constraints.fill = GridBagConstraints.NONE;
+
         constraints.gridx = 0;
         constraints.gridy = 3;
         constraints.gridwidth = 1;
@@ -92,16 +95,17 @@ class View {
         constraints.gridy = 3;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
+        outputDegrees.setFont(font);
         panel.add(outputDegrees, constraints);
 
         constraints.gridx = 3;
         constraints.gridy = 3;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
-        panel.add(degrees, constraints);
+        panel.add(new JLabel("degrees"), constraints);
 
         constraints.gridx = 0;
-        constraints.gridy = 4;
+        constraints.gridy = 5;
         constraints.gridwidth = 4;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.CENTER;
@@ -110,11 +114,11 @@ class View {
         panel.revalidate();
     }
 
-    JFrame getFrame(String title) {
+    private JFrame getFrame(String title) {
         JFrame frame = new JFrame(title) {
         };
-        int width = 450;
-        int height = 200;
+        int width = 500;
+        int height = 300;
         frame.setSize(width, height); // размер окна
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true); // показать фрейм
@@ -122,23 +126,31 @@ class View {
         return frame;
     }
 
-    public JLabel getOutputDegrees() {
+    JLabel getOutputDegrees() {
         return outputDegrees;
     }
 
-    public JTextField getInputDegrees() {
+    JTextArea getInputDegrees() {
         return inputDegrees;
     }
 
-    public JComboBox getFromScales() {
+    JComboBox getFromScales() {
         return fromScales;
     }
 
-    public JComboBox getToScales() {
+    JComboBox getToScales() {
         return toScales;
     }
 
-    public JButton getConvertButton() {
+    JButton getConvertButton() {
         return convertButton;
+    }
+
+    void error(String error){
+        constraints.gridx = 0;
+        constraints.gridy = 4;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        panel.add(new Label(error), constraints);
     }
 }

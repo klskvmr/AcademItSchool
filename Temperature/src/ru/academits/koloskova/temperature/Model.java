@@ -3,29 +3,21 @@ package ru.academits.koloskova.temperature;
 import ru.academits.koloskova.temperature.pojo.Degrees;
 import ru.academits.koloskova.temperature.pojo.Scale;
 
-public class Model {
+class Model {
     private Degrees inputDegrees;
     private Degrees outputDegrees;
 
-    public Model() {
+    Model() {
         inputDegrees = new Degrees(0, Scale.CELSIUS);
         outputDegrees = new Degrees(0, Scale.CELSIUS);
     }
 
-    public Degrees getInputDegrees() {
+    Degrees getInputDegrees() {
         return inputDegrees;
-    }
-
-    public void setInputDegrees(Degrees inputDegrees) {
-        this.inputDegrees = inputDegrees;
     }
 
     Degrees getOutputDegrees() {
         return outputDegrees;
-    }
-
-    public void setOutputDegrees(Degrees outputDegrees) {
-        this.outputDegrees = outputDegrees;
     }
 
     void convert() {
@@ -57,10 +49,10 @@ public class Model {
     private void convertFahrenheit() {
         switch (outputDegrees.getScale()) {
             case CELSIUS:
-                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 32) * 5 / 9));
+                outputDegrees.setCount((inputDegrees.getCount() - 32) * 5 / 9);
                 break;
             case KELVIN:
-                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 32) * 5 / 9 + 273.15));
+                outputDegrees.setCount((inputDegrees.getCount() - 32) * 5 / 9 + 273.15);
                 break;
             default:
                 outputDegrees.setCount(inputDegrees.getCount());
@@ -73,7 +65,7 @@ public class Model {
                 outputDegrees.setCount(inputDegrees.getCount() - 273.15);
                 break;
             case FAHRENHEIT:
-                outputDegrees.setCount(Math.round((inputDegrees.getCount() - 273.15) * 9 / 5 + 32));
+                outputDegrees.setCount((inputDegrees.getCount() - 273.15) * 9 / 5 + 32);
                 break;
             default:
                 outputDegrees.setCount(inputDegrees.getCount());
