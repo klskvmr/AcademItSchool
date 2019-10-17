@@ -9,13 +9,14 @@ class View {
     private JTextArea inputDegrees;
     private JLabel outputDegrees;
     private JButton convertButton;
+    private JLabel error;
 
     private JPanel panel;
     private GridBagConstraints constraints;
 
     View(String title) {
         JFrame frame = getFrame(title);
-panel = new JPanel();
+        panel = new JPanel();
         frame.add(panel);
         panel.setLayout(new GridBagLayout());
         panel.setBackground(Color.pink);
@@ -25,6 +26,7 @@ panel = new JPanel();
         toScales = new JComboBox(scales);
         inputDegrees = new JTextArea("0");
         outputDegrees = new JLabel();
+        error = new JLabel();
         convertButton = new JButton("convert");
 
         constraints = new GridBagConstraints();
@@ -105,6 +107,12 @@ panel = new JPanel();
         panel.add(new JLabel("degrees"), constraints);
 
         constraints.gridx = 0;
+        constraints.gridy = 4;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        panel.add(error, constraints);
+
+        constraints.gridx = 0;
         constraints.gridy = 5;
         constraints.gridwidth = 4;
         constraints.gridheight = 1;
@@ -146,11 +154,7 @@ panel = new JPanel();
         return convertButton;
     }
 
-    void error(String error){
-        constraints.gridx = 0;
-        constraints.gridy = 4;
-        constraints.gridwidth = 1;
-        constraints.gridheight = 1;
-        panel.add(new Label(error), constraints);
+    public JLabel getError() {
+        return error;
     }
 }

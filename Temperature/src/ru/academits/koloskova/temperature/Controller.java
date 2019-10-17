@@ -1,7 +1,6 @@
 package ru.academits.koloskova.temperature;
 
 import ru.academits.koloskova.temperature.pojo.Scale;
-
 import javax.swing.*;
 
 class Controller {
@@ -27,13 +26,13 @@ class Controller {
     }
 
     private void listenConvertButton() {
-
         view.getConvertButton().addActionListener(e -> {
             String text = view.getInputDegrees().getText();
 
             if (hasErrors(text)) {
                 return;
             }
+            view.getError().setText("");
 
             double inputCount = Double.parseDouble(view.getInputDegrees().getText());
 
@@ -50,31 +49,31 @@ class Controller {
         }
 
         if (text.contains(",")) {
-            view.error("Only \".\" allowed");
+            view.getError().setText("Only \".\" allowed");
             return true;
         }
 
-        int dotSignIndex = text.indexOf(".");
+        int dotIndex = text.indexOf(".");
 
-        if (text.lastIndexOf(".") != dotSignIndex) {
-            view.error("Only one \".\" allowed");
+        if (text.lastIndexOf(".") != dotIndex) {
+            view.getError().setText("Only one \".\" allowed");
             return true;
         }
 
         int minusSignIndex = text.indexOf("-");
 
         if (text.lastIndexOf("-") != minusSignIndex) {
-            view.error("Only one \"-\" allowed");
+            view.getError().setText("Only one \"-\" allowed");
             return true;
         }
 
         for (int i = 0; i < text.length(); i++) {
-            if (i == minusSignIndex || i == dotSignIndex) {
+            if (i == minusSignIndex || i == dotIndex) {
                 continue;
             }
 
             if (!Character.isDigit(text.charAt(i))) {
-                view.error("You should use only numbers");
+                view.getError().setText("You should use only numbers");
                 return true;
             }
         }
